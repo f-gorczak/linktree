@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    /* Zmienione tło na niebieski odcień */
+    background-color: #0f172a; 
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Awatar i zawartość idealnie na środku */
+    
+    /* Dopasowana karta w odcieniu ciemnoniebieskim / navy */
+    background: #1e293b; 
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    
+    /* Miękki cień dla lepszego efektu głębi */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Wyśrodkowany awatar */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 25px;
+    display: block; 
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+/* Jasne teksty, żeby dobrze kontrastowały z niebieskim tłem */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 6px;
+}
+
+/* Opis pod imieniem */
+.subtitle {
+    font-size: 14px;
+    color: #94a3b8; /* Delikatny, szaroniebieski kolor tekstu */
+    margin-bottom: 30px;
+}
+
+/* Kontener na linki */
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* Przyciski (linki w pionie) - zachowałem elegancki, jasny styl ze zdjęcia */
+.nav-links a {
+    width: 100%;
+    text-decoration: none;
+    background: #f8fafc; 
+    color: #0f172a; 
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efekt po najechaniu myszką na przycisk */
+.nav-links a:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsywność */
+@media (max-width: 400px) {
+    main {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+}
